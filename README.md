@@ -3,8 +3,8 @@ This is a blog detailing my projects effectuated during the class CH-501.
 
 ##Sketches
 
-Finger [here](sketches/finger.md)
+Finger [here](tree/main/sketches/finger.md)
 
-Press down [here](sketches/handtool.md)
+Press down [here](tree/main/sketches/handtool.md)
 
-Shake it [here](sketches/shaker.md)
+Shake it [here](tree/main/sketches/shaker.md)
