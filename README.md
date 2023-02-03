@@ -14,11 +14,8 @@ Press down [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches
 
 Shake it [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/Shaker.html)
 
-<<<<<<< HEAD
+
 ## The Maze 
 
-[here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab2/PinballMaze.html)
+[here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab2/PinBallMaze.html)
 
-=======
-![](photos/shaker_design.jpeg)
->>>>>>> 19d29f5ed5f2db05f31b671f80cb058060d4b0a3
