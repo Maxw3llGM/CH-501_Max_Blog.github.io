@@ -9,3 +9,8 @@ Finger [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/Fin
 Press down [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/HandTool.html)
 
 Shake it [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/Shaker.html)
+
+## The Maze 
+
+[here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab2/PinballMaze.html)
+

@@ -1,0 +1,55 @@
+# Pinball Maze
+
+## Goal
+
+When testing out the Haply I quickly ran into the standard issue of force feedback tools, the oscillatory glitch. This was achieved when modifying the max Torque to be 3.0 in the firmware and the gain to be 10 in the pantogram Processing Java file. 
+
+![](/Users/miu/CH-501_Max_Blog.github.io/Lab2/videos/Resonance_1.mp4)
+
+I would assume that most would not want to put Haply's two motors under such stress. It damages the motor and can uncalibrated the device. However, is it really considered testing a device if you don't push its limits? So, I decided to take advantage of the glitch and create a maze that has a little pinball puzzle in it for you to solve.
+
+The goal is to move the ball through the maze until you can get it into the left side of the world using the pinball trick. And if you are dextrous enough with the haply, you can put the ball back down the shaft (middle section).
+
+## What was Achieved
+
+* Setting up the device
+* Installing the firmware
+* Run and modify the simple Haply virtual environment in Processing
+* Experimented with different Fbody Objects (FBox, FCircle, FPoly)
+* Created a small maze to complete
+
+## Process
+
+Firstly, I explored the different objects that I can use and interact with that were shown in the Hello Wall Java File. The first thing I tested were polygons. Being able to create any shape was very useful, however, what I discovered is that the hitbox of the object does not necessarily follow the polygons visible shape.
+
+Initially, I thought I can make a game where you would need to move a complex polygon through a small hole but I thought that it might take too long to design and not very interesting.
+
+Then I discovered the chaotic oscillatory nature of the Haply when you push the cursor up against a wall. 
+
+Wanting to capitalize on this, I decided to create a pinball-esk game. 
+So, I needed the pinball. Using the FCircle I determined how to interact with the pinball.
+
+![](/Users/miu/CH-501_Max_Blog.github.io/Lab2/videos/hbeg2.mp4)
+
+Once I was comfortable with it, I continues to build the maze. I generated some corners for the map using FPoly objects and created the wall of the column to which the pinball will be housed.
+
+![](/Users/miu/CH-501_Max_Blog.github.io/Lab2/videos/hbeg3.mp4)
+
+Then I created the little maze for the pinball to move through.
+
+What I realized halfway through is that I need to consider that the cursor will need to start at the center top of the world due to calibration. I can probably take some time into making the start position be less restrictive but for the sake of time I decided to build around that by giving a rout for the cursor that the pinballs cannot use.
+
+
+## Results
+
+![](/Users/miu/CH-501_Max_Blog.github.io/Lab2/videos/hbeg4.mp4)
+
+The final maze is quite fun to play with! Essentially the user must move to the location of the pinball, being able to stop midway to play with another ball in a box, then take the pinball and move it to the middle section (the shaft). Once the pinball is in place (at the bottom of the column) the user either pulls the cursor against the floor underneath the pinball and then lets it go or tries the safer way and tries to hit the pinball manually. This would then send the pinball up the column and if you did it right should send it to the left side of the world which is technically the end goal.
+
+![](/Users/miu/CH-501_Max_Blog.github.io/Lab2/videos/finess.mp4)
+
+There are some quite problematic issues. The first is the uncalibration that happens when trying to us the glitch to launch the pinball out of the shaft. The second is the initialization process. And a reset button that just reinitializes the map and not the entire Java runtime would be good to implement. Right know I still need to close the program down and restart it for me to do another run through it.
+
+## The Feel
+
+My interaction with the haply felt like how I expected it would when first seeing it. The metal cursor surface felt sturdy to move the cursor around but the roughness of the surface left much to be desired. The motors are strong, but I did notice that the horizontal force generated from the motors is not as strong as the vertical forces. The cursor felt fluid enough to use with the arm pantogram only causing issues when the cursor was fully extended. Luckily, it isn't strong enough to rip my fingers off!
