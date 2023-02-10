@@ -1,0 +1,120 @@
+<link rel="STYLESHEET" href="../week11.css">
+
+<h1 id="lab3">Lab3</h1>
+<h2 id="words-phase-one">“Words” Phase One</h2>
+<p>Word 1: Flow</p>
+<ul class="incremental">
+<li>When using the haply with this sketch, it should feel as though you
+are in water.</li>
+</ul>
+<p>Word 2: Nodes</p>
+<ul class="incremental">
+<li>You should be able to sense the push and pull from the nodes (source
+and sink) within the environment.</li>
+</ul>
+<p>Word 3: Particles</p>
+<ul class="incremental">
+<li>When navigating the water, you should feel particles of objects hit
+and nudge the haply.</li>
+</ul>
+<p>An axiom, as per its definition, is a point from which we may start
+to reason.</p>
+<p>As such, these were the inital 3 “axioms” I used for my sketch.
+However, the developping process is never perfect and I ran into far too
+many problem trying to implement the second axiom “Nodes” that I had two
+days left before the deadline and still have not completed the movements
+for “Flow” and “Particles”.</p>
+<p><img src="./photos/OStr.png" /></p>
+<p>Thanks to Brian Eno’s <a
+href="http://stoney.sb.org/eno/oblique.html">Oblique Strategies</a>
+helping me break out of my designers block, I decided to drop the Nodes
+idea in the effort to find a new word. I did however learn alot about
+how to calculate forces for the Haply. As such I started from scratch
+and within one night I create a new set of words.</p>
+<h2 id="words-phase-two">“Words” Phase Two</h2>
+<h3 id="testing-phase">Testing Phase</h3>
+<p>This time in order to have any road blocks in the development phase,
+I tested a few ideas before I decided on my words.</p>
+<p>I like the idea of particles moving across the simulation moving the
+Haply’s end effector. As such I tested how easy it is to move static
+objects.</p>
+<p>Add Video</p>
+<p>Once achieved, I moved on to testing my next idea. I knew I wanted to
+use forces, by realizing that gravitational forces seem to be a bit too
+tricky for the moment, I decided to test with the concept of noise, or
+rather friction in this case. At first, I tried to use the hAPI’s fBody
+class “setfriction” function but soon realized it did not have the same
+effect I had hope for as it did not yield any noticeable change in how
+the haply interacted with the fBody. So, pulling from the knowledge I
+cultivated from trying to implement the nodes, I chose to input noise
+into the force values of the haply. This was achieved by adding a scaled
+randome value in the resulting end effector force variable:</p>
+<p><code>f_ee.add(4000*random(0.0,1.0),4000*random(0.0,1.0));</code></p>
+<p>Add video here:</p>
+<p>Once I new this was possible I found my idea for the second word.</p>
+<h3 id="selection">Selection</h3>
+<p>Word 1: Particles</p>
+<ul class="incremental">
+<li>Using FCircle objects, I wanted to slightly move and nudge the end
+effector of the haply to simulate the idea of bumping into
+something.</li>
+</ul>
+<p>Word 2: Noise</p>
+<ul class="incremental">
+<li>Now that I know how to using noise into the force of the haply,
+otherwise called friction. I can guide the user through the environment
+with friction, where they can pass the haply over an area and feel a
+change in the simulations surface to be rougher.</li>
+</ul>
+<p>Word 3: Space</p>
+<ul class="incremental">
+<li>Using a wall with multiple holes and is thus a wall made up of
+equally spaced smaller walls. The use can percieve the gape in between
+the walls, until they might find one that can be moved out of the way
+and they can pass the wall.</li>
+</ul>
+<h2 id="implementation-phase-3">“Implementation” Phase 3</h2>
+<p>Now is time to realize these idea. I first started with the second
+word, “Noise”.</p>
+<p>Througout my designe process I always had in mind that the sketch
+must have an overarching motion to it, like left to write. As such, I
+though that I can use the noise to convey that idea to the use. I
+therefore decided to add a gradient to the noise based on it’s
+horizontal position in space. One side will naturally induce more noise
+into the end effector than the other.</p>
+<p>It’s akin to concept of particles wanting to always go their lowers
+energy state, from High to Low potential energy.</p>
+<p><embed src="./photos/ngrad.pdf" /></p>
+<p>Initially I decided to create a (as close too) continuous noise
+gradient in the environemnt.</p>
+<p>This was achieved by taking the position of the end effector in the
+virtual space (not measured position, there is a different to be made
+here),</p>
+<p><code>ee_vposx = s.getAvatarPositionX();</code> ,</p>
+<p>and then slowy increase the end effector forces noise level as it’s
+going in a certain direction. This was rather simple to do, however it
+did not feel as though it was enough, there was not enough texture to
+it’s feeling. So, I discretized it to create strips of friction within
+the environment.</p>
+<p><embed src="./photos/fLines.pdf" /></p>
+<p>Each strip will also gradually increase and decrease to and from the
+max friction value based on ds, the max distance away from the mid point
+of the strip. I was able to achieve this by wraping the position of the
+end effector with a modulo function based on the amount of strips I want
+dividing up the max width of the world.</p>
+<p><embed src="./photos/part.pdf" /></p>
+<p>Once that was completed, I proceeded to implement the particles.
+Since I have a horizontal direction, I thought of using the particles as
+a way to induce direction on the vertical axis. I thus decided to put
+them in the middle of the world going from top to bottom as a way create
+the idea of a stream of particles that the user is passing through.</p>
+<p>Add Video.</p>
+<p>This was achieved by positioning 3 FCircle objects in the center of
+the sketch and having them move from top to bottom. Everytime they wrape
+around, the speed at which they are moving changes.</p>
+<p>Finally, when implementing the idea of the walls I decided to change
+my approache and simple create one wall with two opening at the bottom
+and top of the wall so that the user needs to find them by touch. This
+choice was for simplicity reasons as there was too much feedback from
+the end effector due to the noise strips and the particles.</p>
+
