@@ -20,3 +20,8 @@ Shake it [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/S
 [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab2/PinBallMaze.html)
 
 [Code_Link](https://github.com/Maxw3llGM/CH-501_Max_Blog.github.io/tree/main/Lab2/Hello_Wall)
+
+## Lab 3: Go By Feeling
+
+[here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab3/Lab3.html)
+[Code_Link](https://github.com/Maxw3llGM/CH-501_Max_Blog.github.io/tree/main/Lab3/version_2)
