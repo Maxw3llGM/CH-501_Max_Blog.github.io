@@ -134,8 +134,8 @@ void setup(){
   world               = new FWorld();
   
   /* Wall Setup */
-  wall_1 = new FBox(0.75,(worldHeight-4));
-  wall_1.setPosition(worldWidth/2+6, 3);
+  wall_1 = new FBox(0.75,(worldHeight-3));
+  wall_1.setPosition(worldWidth/2+6, 5);
   wall_1.setFill(0,0,0);
   wall_1.setStatic(true);  
   world.add(wall_1);
@@ -197,7 +197,7 @@ void setup(){
   world.setEdgesRestitution(.4);
   world.setEdgesFriction(0.5);
   
-  world.draw();
+  //world.draw();
   
   /* setup framerate speed */
   frameRate(baseFrameRate);
@@ -214,7 +214,7 @@ void setup(){
 void draw(){
   /* put graphical code here, runs repeatedly at defined framerate in setup, else default at 60fps: */
   background(255);
-  world.draw(); 
+  //world.draw(); 
 }
 /* end draw section ****************************************************************************************************/
 

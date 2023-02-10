@@ -88,6 +88,8 @@ This was achieved by positioning 3 FCircle objects in the center of the sketch a
 
 Finally, when implementing the idea of the walls I decided to change my approache and simple create one wall with two opening at the bottom and top of the wall so that the user needs to find them by touch. This choice was for simplicity reasons as there was too much feedback from the end effector due to the noise strips and the particles.
 
+## Revision Phase Finale
+
 
 TODO: ending version of vocabulary, Reflection on quality of expressiveness/ communication achieved. convert md into html, submit all
 
