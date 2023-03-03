@@ -1,4 +1,4 @@
- /**
+  /**
  **********************************************************************************************************************
  * @file       Haptic_Physics_Template.pde
  * @author     Steve Ding, Colin Gallacher
@@ -236,7 +236,7 @@ class SimulationThread implements Runnable{
   public void run(){
     /* put haptic simulation code here, runs repeatedly at 1kHz as defined in setup */
     rendering_force = true;
-    
+    println(haplyBoard.data_available());
     if(haplyBoard.data_available()){
       /* GET END-EFFECTOR STATE (TASK SPACE) */
       widgetOne.device_read_data();
@@ -244,6 +244,7 @@ class SimulationThread implements Runnable{
       angles.set(widgetOne.get_device_angles()); 
       pos_ee.set(widgetOne.get_device_position(angles.array()));
       pos_ee.set(pos_ee.copy().mult(200));  
+      
     }
     
     // if(pos_ee.x < 0){
