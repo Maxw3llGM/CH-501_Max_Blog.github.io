@@ -26,3 +26,9 @@ Shake it [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/S
 [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab3/Lab3.html)
 
 [Code_Link](https://github.com/Maxw3llGM/CH-501_Max_Blog.github.io/tree/main/Lab3/version_2)
+
+## Lab 4: PID Control
+
+[here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/Lab4/Lab4.html)
+
+[Code_Link](https://github.com/Maxw3llGM/CH-501_Max_Blog.github.io/tree/main/Lab4/sketch_PID_GUI)
