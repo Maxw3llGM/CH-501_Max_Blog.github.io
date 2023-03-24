@@ -38,3 +38,9 @@ Shake it [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/sketches/S
 [here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/project/index.html)
 
 [Code_Link](https://github.com/Maxw3llGM/CH-501_Max_Blog.github.io/tree/main/project/Unity_samples)
+
+## Project Iteration 2: Improvements
+
+[here](https://maxw3llgm.github.io/CH-501_Max_Blog.github.io/project2/index.html)
+
+[Code_Link](https://github.com/Maxw3llGM/CH-501_Max_Blog.github.io/tree/main/project2/canhap501_slingshot)
